@@ -24,6 +24,23 @@ namespace CRUDMahasiswaADO
         private readonly string connectionString = (
             "Data Source=LAPTOP-V3CL2RKG\\BEBEB;Initial Catalog=DBAkademikADO;Integrated Security=True");
 
+        //langkah 5 ( membuat method koneksi database)
+        private void connectToDatabase()
+        {
+            try
+            {
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                MessageBox.Show("Koneksi berhasil!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Koneksi gagal: " + ex.Message);
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
