@@ -258,6 +258,18 @@ namespace CRUDMahasiswaADO
             }
         }
 
+        //Langkah 11 ( membuat method clear form)
+        private void ClearForm()
+        {
+            txtNIM.Clear();
+            txtNama.Clear();
+            cmbJK.SelectedIndex = -1;
+            txtAlamat.Clear();
+            txtKodeProdi.Clear();
+            dtpTanggalLahir.Value = DateTime.Now;
+            txtNIM.Focus();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
